@@ -1,0 +1,6 @@
+﻿insert into OnlineShop.dbo.City (Name,ProvinceId)
+select Name,19
+from dbo.Unit
+where Type='20101001' and Parent=
+(select Code from dbo.Unit
+where [Name] like N'%قم%' and Type='20101')
